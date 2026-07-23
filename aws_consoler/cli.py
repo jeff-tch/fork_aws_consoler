@@ -95,6 +95,12 @@ def main(argv=sys.argv[1:]):
              "a URL to forward the user to after obtaining their federation "
              "token."
     )
+    adv_grp.add_argument(
+        "--no-verify-ssl", action="store_true", default=False,
+        help="[advanced] Disable SSL certificate verification. Useful when "
+             "connecting through a proxy with a self-signed certificate. "
+             "Not recommended for production use."
+    )
     logger.debug("Advanced group ready.")
 
     logger.info("Parsing arguments...")
